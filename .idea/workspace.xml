@@ -22,22 +22,83 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in electric_calendar_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in sum_of_depths_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_find_pair_that_equal_to_target.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.find_pair_that_equal_to_target.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_cycle.executor": "Run",
+    "Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_empty_graph.executor": "Run",
+    "Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_no_cycle.executor": "Run",
+    "Python tests.Python tests in cycle_in_graph_test.py.executor": "Run",
+    "Python tests.Python tests in electric_calendar_test.py.executor": "Run",
+    "Python tests.Python tests in sum_of_depths_test.py.executor": "Run",
+    "Python tests.Python tests in test_find_pair_that_equal_to_target.py.executor": "Run",
+    "Python.find_pair_that_equal_to_target.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_no_cycle">
+    <configuration name="Python tests for cycle_in_graph_test.TestCycleDetection.test_cycle" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="algorythm_and_programing_part_2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;cycle_in_graph_test.TestCycleDetection.test_cycle&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for cycle_in_graph_test.TestCycleDetection.test_empty_graph" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="algorythm_and_programing_part_2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;cycle_in_graph_test.TestCycleDetection.test_empty_graph&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for cycle_in_graph_test.TestCycleDetection.test_no_cycle" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="algorythm_and_programing_part_2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;cycle_in_graph_test.TestCycleDetection.test_no_cycle&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_no_cycle" />
+        <item itemvalue="Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_empty_graph" />
+        <item itemvalue="Python tests.Python tests for cycle_in_graph_test.TestCycleDetection.test_cycle" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -55,6 +116,7 @@
       <updated>1711464402084</updated>
       <workItem from="1711464403617" duration="680000" />
       <workItem from="1711465211166" duration="18000" />
+      <workItem from="1711466192163" duration="307000" />
     </task>
     <servers />
   </component>
