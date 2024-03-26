@@ -1,5 +1,5 @@
 import unittest
-from main import sorting
+from src.electric_calendar import sorting
 
 class TestSortAndMergeIntervals(unittest.TestCase):
     def test_sort_and_merge_intervals(self):
