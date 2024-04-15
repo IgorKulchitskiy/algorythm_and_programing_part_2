@@ -1,5 +1,5 @@
 import unittest
-from def_find_pair_with_sum import find_pair_which_equal_target
+from src.find_pair_that_equal_to_target import find_pair_which_equal_target
 
 class Test(unittest.TestCase):
     def test_true(self):
