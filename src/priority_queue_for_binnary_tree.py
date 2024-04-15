@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #4___
+=======
+ priority_queue_on_binary_tree
+#4_
+>>>>>>> 1912c85e9cd811e86f081bf398c1c0c37c559e10
+
+#4__
+ main
 
 class Node:
     def __init__(self, value, priority):
@@ -43,8 +51,11 @@ class PriorityQueue:
             if node is None:
                 return None
 
-            if node.value == value:
-                return None
+           if node.value == value:
+    return None
+
+return None
+
 
             if node.left and node.left.value == value:
                 node.left = None
