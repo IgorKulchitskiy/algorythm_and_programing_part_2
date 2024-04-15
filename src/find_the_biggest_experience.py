@@ -9,7 +9,7 @@ def max_experience(levels, experience):
             priority_queue.add_task(experience[i][j], -experience[i][j])
 
         level_max_exp = 0
-        for _ in range(i + 1):  
+        for _ in range(i + 1):
             task = priority_queue.remove_highest_priority_task()
             if task:
                 _, priority = task

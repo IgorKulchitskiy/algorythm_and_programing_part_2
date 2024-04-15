@@ -19,7 +19,6 @@ class TestMaxExperience(unittest.TestCase):
             [9, 1, 2],
             [3, 0, 0, 5]
         ]
-        # Очікуємо, що максимальний шлях буде обчислений для гілки [7, 8, 2, 5]
         self.assertEqual(max_experience(levels, experience), 42)
 
 if __name__ == '__main__':
