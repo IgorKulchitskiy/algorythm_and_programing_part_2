@@ -1,5 +1,5 @@
-##6
 from src.priority_queue_for_binnary_tree import PriorityQueue
+
 def max_experience(levels, experience):
     max_exp = 0
     for i in range(levels):
@@ -9,11 +9,11 @@ def max_experience(levels, experience):
             priority_queue.add_task(experience[i][j], -experience[i][j])
 
         level_max_exp = 0
-        for _ in range(i + 1):
+        for _ in range(i + 1):  
             task = priority_queue.remove_highest_priority_task()
             if task:
-                exp_on_current_level, _ = task
-                level_max_exp += exp_on_current_level
+                _, priority = task
+                level_max_exp += -priority
             else:
                 break
 
@@ -21,14 +21,14 @@ def max_experience(levels, experience):
 
     return max_exp
 
-
 def main():
     with open("career_lab.in", "r") as f:
         levels = int(f.readline())
         experience = []
         for i in range(levels):
             line = list(map(int, f.readline().split()))
-            experience.append(line[::-1])
+            experience.append(line)
+
     max_exp = max_experience(levels, experience)
 
     with open("career_lab.out", "w") as f:

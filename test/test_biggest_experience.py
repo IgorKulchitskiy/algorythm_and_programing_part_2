@@ -1,19 +1,26 @@
-##6
 import unittest
-from src.find_the_biggest_experience import max_experience
+from  src.find_the_biggest_experience import max_experience
+import unittest
 
 class TestMaxExperience(unittest.TestCase):
-
-    def test_max_experience_first_level(self):
-        levels = 1
-        experience = [[9999]]
-        self.assertEqual(max_experience(levels, experience), 9999)
-
-    def test_max_experience_second_level(self):
+    def test_small_example(self):
         levels = 2
-        experience = [[1], [8, 6]]
-        self.assertEqual(max_experience(levels, experience), 13)
+        experience = [
+            [2],
+            [2, 3]
+        ]
+        self.assertEqual(max_experience(levels, experience), 7)
 
+    def test_max_path(self):
+        levels = 4
+        experience = [
+            [7],
+            [7, 8],
+            [9, 1, 2],
+            [3, 0, 0, 5]
+        ]
+        # Очікуємо, що максимальний шлях буде обчислений для гілки [7, 8, 2, 5]
+        self.assertEqual(max_experience(levels, experience), 42)
 
 if __name__ == '__main__':
     unittest.main()
