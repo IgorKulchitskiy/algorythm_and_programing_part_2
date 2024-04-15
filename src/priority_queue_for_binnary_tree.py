@@ -47,12 +47,11 @@ class PriorityQueue:
             if node is None:
                 return None
 
-            if node.value == value:
-              priority_queue_on_binary_tree
-                return None
+           if node.value == value:
+    return None
 
-                return None
-            main
+return None
+
 
             if node.left and node.left.value == value:
                 node.left = None
