@@ -1,15 +1,10 @@
- priority_queue_on_binary_tree
-#4_
-
-#4__
- main
-
 class Node:
     def __init__(self, value, priority):
         self.value = value
         self.priority = priority
         self.left = None
         self.right = None
+
 
 class PriorityQueue:
     def __init__(self):
@@ -47,11 +42,8 @@ class PriorityQueue:
             if node is None:
                 return None
 
-           if node.value == value:
-    return None
-
-return None
-
+            if node.value == value:
+                return None
 
             if node.left and node.left.value == value:
                 node.left = None
@@ -80,12 +72,12 @@ if __name__ == "__main__":
     priority_queue.add_task("Task 1", 3)
     priority_queue.add_task("Task 2", 1)
     priority_queue.add_task("Task 3", 2)
-    
+
     print("Ініціалізація черги:")
     print(priority_queue.traverse())
-    
+
     print("\nВидалення елемента з найвищим пріорітетом:")
     print(priority_queue.remove_highest_priority_task())
-    
+
     print("\nЧерга після видалення:")
     print(priority_queue.traverse())
