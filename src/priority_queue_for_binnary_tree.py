@@ -1,4 +1,4 @@
-#4_
+#4___
 
 class Node:
     def __init__(self, value, priority):

@@ -1,7 +1,7 @@
 #4_
 
 import unittest
-from priority_queue_for_binnary_tree import PriorityQueue, Node 
+from src.priority_queue_for_binnary_tree import PriorityQueue
 
 class TestPriority(unittest.TestCase):
 
