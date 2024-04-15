@@ -1,3 +1,4 @@
+##6
 from src.priority_queue_for_binnary_tree import PriorityQueue
 def max_experience(levels, experience):
     max_exp = 0
