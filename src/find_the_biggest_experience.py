@@ -1,38 +1,26 @@
-from src.priority_queue_for_binnary_tree import PriorityQueue
 
-def max_experience(levels, experience):
-    max_exp = 0
-    for i in range(levels):
-        priority_queue = PriorityQueue()
-
-        for j in range(i, -1, -1):
-            priority_queue.add_task(experience[i][j], -experience[i][j])
-
-        level_max_exp = 0
-        for _ in range(i + 1):
-            task = priority_queue.remove_highest_priority_task()
-            if task:
-                _, priority = task
-                level_max_exp += -priority
-            else:
-                break
-
-        max_exp += level_max_exp
-
-    return max_exp
+def maximum_experience(levels, organization):
+    max_experience = 0
+    queue = [(0, 0)]
+    while queue:
+        level, experience = queue.pop(0)
+        max_experience = max(max_experience, experience)
+        if level < levels:
+            for next_level, next_experience in enumerate(organization[level], start=1):
+                queue.append((level + 1, experience + next_experience))
+    return max_experience
 
 def main():
-    with open("career_lab.in", "r") as f:
+    with open('career_lab.in', 'r') as f:
         levels = int(f.readline())
-        experience = []
-        for i in range(levels):
-            line = list(map(int, f.readline().split()))
-            experience.append(line)
+        organization = []
+        for _ in range(levels):
+            organization.append(list(map(int, f.readline().split())))
 
-    max_exp = max_experience(levels, experience)
+    max_experience = maximum_experience(levels, organization)
 
-    with open("career_lab.out", "w") as f:
-        f.write(str(max_exp))
+    with open('career_lab.out', 'w') as f:
+        f.write(str(max_experience))
 
 if __name__ == "__main__":
     main()
