@@ -1,4 +1,4 @@
-
+##6
 def maximum_experience(levels, organization):
     max_experience = 0
     queue = [(0, 0)]
