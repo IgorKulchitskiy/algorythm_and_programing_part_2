@@ -1,3 +1,5 @@
+
+#7
 def table_prefix(pattern, m):
     prefix_table = [0] * m
     length = 0
