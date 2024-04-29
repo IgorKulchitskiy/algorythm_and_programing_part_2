@@ -1,3 +1,4 @@
+#8
 def read_input(file_path):
     graph = {}
     with open(file_path, 'r') as file:

@@ -1,3 +1,4 @@
+#8
 import unittest
 
 from src.min_len_of_cable_prima import read_input, prim
