@@ -1,49 +1,5 @@
-class Node:
-    def __init__(self, value, priority):
-        self.left = None
-        self.right = None
-        self.value = value
-        self.priority = priority
+from .priority_queue_for_binnary_tree import PriorityQueue
 
-
-class PriorityQueue:
-    def __init__(self):
-        self.root = None
-
-    def insert(self, value, priority):
-        if self.root is None:
-            self.root = Node(value, priority)
-        else:
-            self.inner_insert(self.root, value, priority)
-
-    def inner_insert(self, node, value, priority):
-        if priority >= node.priority:
-            if node.left is None:
-                node.left = Node(value, priority)
-            else:
-                self.inner_insert(node.left, value, priority)
-        else:
-            if node.right is None:
-                node.right = Node(value, priority)
-            else:
-                self.inner_insert(node.right, value, priority)
-
-    def delete_min(self):
-        if self.root is None:
-            return None
-        else:
-            return self.inner_delete_min(self.root)
-
-    def inner_delete_min(self, node):
-        if node.left is not None:
-            min_node = self.inner_delete_min(node.left)
-            if node.left.priority == min_node.priority:
-                node.left = None
-            return min_node
-        else:
-            min_node = Node(node.value, node.priority)
-            self.root = node.right
-            return min_node
 
 
 def read_input(file_path):
@@ -71,8 +27,10 @@ def prim(graph):
         pq.insert((start_node, neighbor, cost), cost)
 
     while pq.root:
-        edge = pq.delete_min()
-        cost, current, next_node = edge.priority, edge.value[0], edge.value[1]
+        node = pq.delete()
+        #cost, current, next_node = edge.priority, edge.value[0], edge.value[1]
+        edge, cost = node
+        current, next_node, cost = edge
         if next_node not in visited:
             visited.add(next_node)
             min_prim_tree.append((current, next_node, cost))
