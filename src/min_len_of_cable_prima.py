@@ -1,7 +1,52 @@
-from typing import Dict, List, Tuple
-from queue import PriorityQueue
+class Node:
+    def __init__(self, value, priority):
+        self.left = None
+        self.right = None
+        self.value = value
+        self.priority = priority
 
-def read_input(file_path: str) -> Dict[str, List[Tuple[str, int]]]:
+
+class PriorityQueue:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, value, priority):
+        if self.root is None:
+            self.root = Node(value, priority)
+        else:
+            self.inner_insert(self.root, value, priority)
+
+    def inner_insert(self, node, value, priority):
+        if priority >= node.priority:
+            if node.left is None:
+                node.left = Node(value, priority)
+            else:
+                self.inner_insert(node.left, value, priority)
+        else:
+            if node.right is None:
+                node.right = Node(value, priority)
+            else:
+                self.inner_insert(node.right, value, priority)
+
+    def delete_min(self):
+        if self.root is None:
+            return None
+        else:
+            return self.inner_delete_min(self.root)
+
+    def inner_delete_min(self, node):
+        if node.left is not None:
+            min_node = self.inner_delete_min(node.left)
+            if node.left.priority == min_node.priority:
+                node.left = None
+            return min_node
+        else:
+            min_node = Node(node.value, node.priority)
+            self.root = node.right
+            return min_node
+
+
+def read_input(file_path):
     graph = {}
     with open(file_path, 'r') as file:
         for line in file:
@@ -15,32 +60,31 @@ def read_input(file_path: str) -> Dict[str, List[Tuple[str, int]]]:
             graph[well2].append((well1, distance))
     return graph
 
-def prim(graph: Dict[str, List[Tuple[str, int]]]) -> int:
+
+def prim(graph):
     visited = set()
     min_prim_tree = []
+    pq = PriorityQueue()
     start_node = next(iter(graph))
     visited.add(start_node)
-    edges = [(cost, start_node, neighbor) for neighbor, cost in graph[start_node]]
-    edges.sort()
+    for neighbor, cost in graph[start_node]:
+        pq.insert((start_node, neighbor, cost), cost)
 
-    priority_queue = PriorityQueue()
-
-    for edge in edges:
-        priority_queue.put(edge)
-
-    while not priority_queue.empty():
-        cost, current, next_node = priority_queue.get()
+    while pq.root:
+        edge = pq.delete_min()
+        cost, current, next_node = edge.priority, edge.value[0], edge.value[1]
         if next_node not in visited:
             visited.add(next_node)
             min_prim_tree.append((current, next_node, cost))
             for neighbor, n_cost in graph[next_node]:
                 if neighbor not in visited:
-                    priority_queue.put((n_cost, next_node, neighbor))
+                    pq.insert((next_node, neighbor, n_cost), n_cost)
 
     if len(visited) != len(graph):
         return -1
     else:
         return sum(cost for _, _, cost in min_prim_tree)
+
 
 file_path = "communication_wells.csv"
 graph = read_input(file_path)

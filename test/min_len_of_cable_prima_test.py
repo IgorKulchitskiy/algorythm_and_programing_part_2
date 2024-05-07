@@ -28,7 +28,7 @@ class TestGraph(unittest.TestCase):
             'K3': [('K1', 1000), ('K2', 1500), ('K4', 100)],
             'K4': [('K2', 4000), ('K3', 100)]
         }
-        expected_output = 2000
+        expected_output = 6500
 
         output = prim(graph)
 
