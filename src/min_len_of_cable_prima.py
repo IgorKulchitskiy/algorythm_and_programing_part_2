@@ -28,7 +28,6 @@ def prim(graph):
 
     while pq.root:
         node = pq.delete()
-        #cost, current, next_node = edge.priority, edge.value[0], edge.value[1]
         edge, cost = node
         current, next_node, cost = edge
         if next_node not in visited:
@@ -42,9 +41,3 @@ def prim(graph):
         return -1
     else:
         return sum(cost for _, _, cost in min_prim_tree)
-
-
-file_path = "communication_wells.csv"
-graph = read_input(file_path)
-min_cable_length = prim(graph)
-print("Min Cable Length:", min_cable_length)
