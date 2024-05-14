@@ -1,4 +1,4 @@
-from .priority_queue_for_binnary_tree import PriorityQueue
+from src.priority_queue_for_binnary_tree import PriorityQueue
 
 
 
