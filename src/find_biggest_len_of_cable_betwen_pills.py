@@ -1,3 +1,4 @@
+#9
 import math
 def max_cable_length(w, heights):
     n = len(heights)
